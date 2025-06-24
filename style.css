@@ -1,0 +1,259 @@
+/* Estilos Globais */
+:root {
+  --bg-color: #1e1e1e;
+  --sidebar-bg: #252525;
+  --card-bg: #333333;
+  --text-color: #f0f0f0;
+  --text-muted: #8e8e8e;
+  --accent-color: #f9c900;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* --- BARRA LATERAL (SIDEBAR) --- */
+.sidebar {
+  width: 280px;
+  background-color: var(--sidebar-bg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0; /* Impede que a sidebar encolha */
+}
+
+.sidebar-header {
+  margin-bottom: 2.5rem;
+}
+
+.logo {
+  width: 120px; /* Ajuste o tamanho da logo conforme necessário */
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.main-nav li a {
+  color: var(--text-muted);
+  text-decoration: none;
+  display: block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.main-nav li a:hover {
+  color: var(--text-color);
+  background-color: var(--card-bg);
+}
+
+.main-nav li.active a {
+  background-color: var(--accent-color);
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-title {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  padding: 0 1.5rem;
+  text-transform: uppercase;
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.main-content {
+  flex-grow: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+  padding: 3rem 4rem;
+  overflow-y: auto; /* Adiciona scroll se o conteúdo for muito grande */
+}
+
+#project-intro {
+  margin-bottom: 3rem;
+}
+
+.main-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 100ch;
+  text-align: justify;
+}
+
+.main-content h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.main-content > p {
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  max-width: 65ch;
+}
+
+/* --- Grade de Categorias e Detalhes (mesmos estilos de antes, apenas ajustados) --- */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: 1px solid #444;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon svg {
+  width: 48px;
+  height: 48px;
+  stroke: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.card span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.guidelines-content {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* --- SEÇÃO "DESENVOLVIDO POR" --- */
+.site-footer {
+  text-align: center;
+  padding-top: 3rem;
+  margin-top: 4rem;
+  border-top: 1px solid var(--card-bg);
+}
+
+.site-footer h3 {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.profiles-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  flex-wrap: wrap; /* Garante que funcione bem em telas pequenas */
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+}
+
+.profile-picture {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%; /* Deixa a foto redonda */
+  object-fit: cover; /* Garante que a foto não fique distorcida */
+  margin-bottom: 1rem;
+  border: 4px solid var(--card-bg);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.profile-email {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.profile-email:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+
+#back-button {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid #555;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: background-color 0.2s;
+}
+
+#back-button:hover {
+  background-color: #444;
+}
+
+#guideline-title {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+
+#guideline-details ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#guideline-details li {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--accent-color);
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

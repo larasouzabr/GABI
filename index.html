@@ -59,6 +59,24 @@
         </header>
 
         <nav class="main-nav">
+          <div class="theme-switcher-container">
+            <span class="material-symbols-outlined theme-icon-moon"
+              >dark_mode</span
+            >
+
+            <label class="theme-switcher" for="theme-toggle">
+              <input
+                type="checkbox"
+                id="theme-toggle"
+                aria-label="Mudar tema"
+              />
+              <span class="slider"></span>
+            </label>
+
+            <span class="material-symbols-outlined theme-icon-sun"
+              >light_mode</span
+            >
+          </div>
           <h3 class="nav-title">CATEGORIAS</h3>
           <ul>
             <li><a href="#tamanho-layout">Tamanho e Layout</a></li>
@@ -73,20 +91,6 @@
             <li><a href="#recomendacoes-gerais">Recomendações Gerais</a></li>
           </ul>
         </nav>
-        <div class="theme-switcher-container">
-          <span class="material-symbols-outlined theme-icon-moon"
-            >dark_mode</span
-          >
-
-          <label class="theme-switcher" for="theme-toggle">
-            <input type="checkbox" id="theme-toggle" aria-label="Mudar tema" />
-            <span class="slider"></span>
-          </label>
-
-          <span class="material-symbols-outlined theme-icon-sun"
-            >light_mode</span
-          >
-        </div>
       </aside>
 
       <main class="main-content">
@@ -94,8 +98,8 @@
           <h1>GABI: Guia Acolhedor de Banking para Idosos</h1>
 
           <p class="project-description">
-            O GABI (Guia de Acolhedor de Banking para Idosos) é um projeto
-            de Trabalho de Conclusão de Curso (TCC) desenvolvido com base em uma
+            O GABI (Guia de Acolhedor de Banking para Idosos) é um projeto de
+            Trabalho de Conclusão de Curso (TCC) desenvolvido com base em uma
             revisão sistemática da literatura (RSL) e em uma pesquisa direta com
             usuários idosos. Esse guia prático reúne diretrizes fundamentadas em
             evidências científicas e na experiência real da população 60+,
@@ -174,7 +178,12 @@
             id="funcionalidades-conteudo"
             data-category="funcionalidades-conteudo"
           >
-            <div class="card-icon">    <img src="img/features.png" alt="icon Funcionalidades e Conteúdo" /></div>
+            <div class="card-icon">
+              <img
+                src="img/features.png"
+                alt="icon Funcionalidades e Conteúdo"
+              />
+            </div>
             <span>Funcionalidades e Conteúdo</span>
           </div>
 
@@ -183,7 +192,12 @@
             id="recomendacoes-gerais"
             data-category="recomendacoes-gerais"
           >
-            <div class="card-icon"><img src="img/recomendations.png" alt="icon Recomendações Gerais" /></div>
+            <div class="card-icon">
+              <img
+                src="img/recomendations.png"
+                alt="icon Recomendações Gerais"
+              />
+            </div>
             <span>Recomendações Gerais</span>
           </div>
         </section>

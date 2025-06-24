@@ -1,23 +1,46 @@
-/* Estilos Globais */
+/* ==========================================================================
+   DEFINIÇÃO DOS TEMAS E VARIÁVEIS GLOBAIS
+   ========================================================================== */
 :root {
-  --bg-color: #1e1e1e;
-  --sidebar-bg: #252525;
-  --card-bg: #333333;
-  --text-color: #f0f0f0;
-  --text-muted: #8e8e8e;
-  --accent-color: #f9c900;
+  --bg-color: #1a202c;
+  --sidebar-bg: #2d3748;
+  --card-bg: #4a5568;
+  --text-color: #e2e8f0;
+  --text-muted: #a0aec0;
+  --accent-color: #4fd1c5;
+  --border-color: #4a5568;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --hover-bg-color: #5a6578;
+}
+
+[data-theme="light"] {
+  --bg-color: #f8f9fa;
+  --sidebar-bg: #ffffff;
+  --card-bg: #ffffff;
+  --text-color: #212529;
+  --text-muted: #6c757d;
+  --accent-color: #005a9c;
+  --border-color: #dee2e6;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-bg-color: #f1f3f5;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif;
-  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
 }
 
 .page-wrapper {
@@ -25,6 +48,9 @@ body {
   min-height: 100vh;
 }
 
+/* ==========================================================================
+   SIDEBAR E NAVEGAÇÃO
+   ========================================================================== */
 .sidebar {
   width: 280px;
   background-color: var(--sidebar-bg);
@@ -32,10 +58,12 @@ body {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  border-right: 1px solid var(--border-color);
 }
 
 .sidebar-header {
   margin-bottom: 2.5rem;
+  position: relative;
 }
 
 .logo {
@@ -44,8 +72,6 @@ body {
 
 .main-nav ul {
   list-style: none;
-  padding: 0;
-  margin: 0 0 2rem 0;
 }
 
 .main-nav li a {
@@ -60,12 +86,12 @@ body {
 
 .main-nav li a:hover {
   color: var(--text-color);
-  background-color: var(--card-bg);
+  background-color: var(--hover-bg-color);
 }
 
 .main-nav li.active a {
   background-color: var(--accent-color);
-  color: #000;
+  color: var(--bg-color);
   font-weight: bold;
 }
 
@@ -74,44 +100,70 @@ body {
   font-size: 0.8rem;
   font-weight: bold;
   letter-spacing: 1px;
-  margin-bottom: 1rem;
+  margin: 2rem 0 1rem 0;
   padding: 0 1.5rem;
   text-transform: uppercase;
 }
 
+.theme-switcher-container {
+  margin-top: 5px;
+  padding-top: 2rem;
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.theme-icon-sun,
+.theme-icon-moon {
+  color: var(--text-muted);
+  vertical-align: middle;
+  font-size: 24px;
+  transition: color 0.2s;
+}
+
+.theme-icon-sun {
+  display: inline-block;
+}
+.theme-icon-moon {
+  display: inline-block;
+}
+
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL
+   ========================================================================== */
 .main-content {
   flex-grow: 1;
   padding: 3rem 4rem;
   overflow-y: auto;
 }
 
-#project-intro {
-  margin-bottom: 3rem;
-}
-
+#project-intro h1,
 .main-content h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
+  color: var(--text-color);
 }
 
 .project-description {
   font-size: 1.1rem;
   color: var(--text-muted);
-  max-width: 100ch;
+  max-width: 80ch;
   text-align: justify;
+  margin-bottom: 3rem;
 }
 
 .main-content h2 {
   font-size: 1.75rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-.main-content > p {
-  color: var(--text-muted);
-  margin-bottom: 2.5rem;
-  max-width: 65ch;
-}
-
+/* ==========================================================================
+   GRID DE CARDS
+   ========================================================================== */
 .category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -124,14 +176,36 @@ body {
   padding: 1.5rem;
   text-align: center;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  border: 1px solid #444;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s, background-color 0.2s;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 10px var(--shadow-color);
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px var(--shadow-color);
+  background-color: var(--hover-bg-color);
 }
+
+.card-icon > img {
+  width: 130px;
+}
+.card-icon {
+  align-content: center;
+  min-height: 190px;
+}
+
+.card:nth-child(1):hover,
+.card:nth-child(2):hover,
+.card:nth-child(3):hover,
+.card:nth-child(4):hover,
+.card:nth-child(5):hover,
+.card:nth-child(6):hover,
+.card:nth-child(7):hover,
+.card:nth-child(8):hover {
+  color: #ffffff;
+}
+
 .card:nth-child(1):hover {
   background-color: #3498db;
 }
@@ -163,51 +237,109 @@ body {
 .card:nth-child(8):hover {
   background-color: #34495e;
 }
+/* ==========================================================================
+   INTERRUPTOR DE TEMA E MENU HAMBÚRGUER
+   ========================================================================== */
 
-.card-icon svg {
-  width: 48px;
-  height: 48px;
-  stroke: var(--text-color);
-  margin-bottom: 1rem;
+.theme-switcher {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
 }
 
-.card span {
-  font-size: 1rem;
-  font-weight: 500;
+.theme-switcher input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-.guidelines-content {
-  animation: fadeIn 0.5s ease-in-out;
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--text-muted);
+  transition: 0.4s;
+  border-radius: 34px;
 }
 
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--sidebar-bg);
+  border: 1px solid var(--text-muted);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--accent-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+  background: var(--sidebar-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 24px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.menu-close {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 32px;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   OUTROS ELEMENTOS (RODAPÉ, BOTÕES, DETALHES)
+   ========================================================================== */
 .site-footer {
   text-align: center;
   padding-top: 3rem;
   margin-top: 4rem;
-  border-top: 1px solid var(--card-bg);
+  border-top: 1px solid var(--border-color);
 }
-
 .site-footer h3 {
-  font-size: 1.5rem;
   color: var(--text-muted);
+  font-size: 1.5rem;
   margin-bottom: 2.5rem;
 }
-
 .profiles-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   gap: 4rem;
   flex-wrap: wrap;
 }
-
 .profile-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 200px;
 }
-
 .profile-picture {
   width: 130px;
   height: 130px;
@@ -215,31 +347,22 @@ body {
   object-fit: cover;
   margin-bottom: 1rem;
   border: 4px solid var(--card-bg);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
 .profile-name {
   font-weight: bold;
-  font-size: 1.1rem;
-  margin: 0.5rem 0;
 }
-
 .profile-email {
-  font-size: 0.9rem;
   color: var(--text-muted);
   text-decoration: none;
-  transition: color 0.2s ease-in-out;
 }
-
 .profile-email:hover {
   color: var(--accent-color);
-  text-decoration: underline;
 }
 
 #back-button {
   background-color: var(--card-bg);
   color: var(--text-color);
-  border: 1px solid #555;
+  border: 1px solid var(--border-color);
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   font-size: 1rem;
@@ -250,7 +373,7 @@ body {
 }
 
 #back-button:hover {
-  background-color: #444;
+  background-color: var(--hover-bg-color);
 }
 
 #guideline-title {
@@ -261,25 +384,104 @@ body {
 
 #guideline-details ul {
   list-style: none;
-  padding-left: 0;
 }
 
 #guideline-details li {
   background-color: var(--card-bg);
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 8px;
   margin-bottom: 1rem;
   border-left: 4px solid var(--accent-color);
-  line-height: 1.6;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
+/* ==========================================================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .main-nav li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    display: block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 11px;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  .theme-switcher-container {
+    margin-top: 5px;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .card-icon > img {
+    width: 80px;
+    min-height: 97px;
+  }
+
+  .card > span {
+    font-size: small;
+    font-weight: 700;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1001; /* Acima do overlay */
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  .sidebar.is-open .menu-close {
+    display: block;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 2rem 1.5rem;
+    padding-top: 5rem;
+  }
+
+  #project-intro h1,
+  .main-content h1 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-color);
+  }
+
+  .main-content h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .project-description {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1rem;
+  }
+
+  .profiles-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
   }
 }

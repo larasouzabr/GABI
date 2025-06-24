@@ -4,42 +4,95 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GABI: Guia Acolhedor de Banking para Idosos</title>
-    <link rel="stylesheet" href="style.css" />
-    <meta
-      name="description"
-      content="Guia de Acessibilidade para Banking de Idosos"
+    <link rel="icon" href="img/gabi.png" type="image/x-icon" />
+    <meta name="description" content="Guia Acolhedor de Banking para Idosos" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
 
-    <link rel="icon" href="img/gabi.png" type="image/x-icon" />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      />
+    </noscript>
+
+    <link
+      rel="preload"
+      href="style.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <noscript>
+      <link rel="stylesheet" href="style.css" />
+    </noscript>
   </head>
   <body>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+      &#9776;
+    </button>
+
     <div class="page-wrapper">
-      <aside class="sidebar">
+      <aside class="sidebar" id="sidebar">
         <header class="sidebar-header">
           <img src="img/gabi.png" alt="Logo GABI" class="logo" />
+          <button class="menu-close" id="menu-close" aria-label="Fechar menu">
+            &times;
+          </button>
         </header>
+
         <nav class="main-nav">
-          <ul>
-            <li class="active"><a href="#">Início</a></li>
-            <li><a href="#">Sobre o GABI</a></li>
-          </ul>
           <h3 class="nav-title">CATEGORIAS</h3>
           <ul>
-            <li><a href="#">Tamanho e Layout</a></li>
-            <li><a href="#">Elementos Visuais</a></li>
-            <li><a href="#">Navegação e Interação</a></li>
-            <li><a href="#">Feedback e Erros</a></li>
-            <li><a href="#">Segurança e Confiança</a></li>
-            <li><a href="#">Aprendizagem e Suporte</a></li>
-            <li><a href="#">Funcionalidades</a></li>
-            <li><a href="#">Recomendações Gerais</a></li>
+            <li><a href="#tamanho-layout">Tamanho e Layout</a></li>
+            <li><a href="#elementos-visuais">Elementos Visuais</a></li>
+            <li><a href="#navegacao-interacao">Navegação e Interação</a></li>
+            <li><a href="#feedback-erros">Feedback e Erros</a></li>
+            <li><a href="#seguranca-confianca">Segurança e Confiança</a></li>
+            <li><a href="#aprendizagem-suporte">Aprendizagem e Suporte</a></li>
+            <li>
+              <a href="#funcionalidades-conteudo">Funcionalidades e Conteúdo</a>
+            </li>
+            <li><a href="#recomendacoes-gerais">Recomendações Gerais</a></li>
           </ul>
         </nav>
+        <div class="theme-switcher-container">
+          <span class="material-symbols-outlined theme-icon-moon"
+            >dark_mode</span
+          >
+
+          <label class="theme-switcher" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" aria-label="Mudar tema" />
+            <span class="slider"></span>
+          </label>
+
+          <span class="material-symbols-outlined theme-icon-sun"
+            >light_mode</span
+          >
+        </div>
       </aside>
 
       <main class="main-content">
         <section id="project-intro">
           <h1>GABI: Guia Acolhedor de Banking para Idosos</h1>
+
           <p class="project-description">
             O GABI (Guia de Acessibilidade para Banking de Idosos) é um projeto
             de Trabalho de Conclusão de Curso (TCC) desenvolvido com base em uma
@@ -58,49 +111,79 @@
         <h2>Categorias de Diretrizes</h2>
 
         <section id="category-grid" class="category-grid">
-          <div class="card" data-category="tamanho-layout">
+          <div class="card" id="tamanho-layout" data-category="tamanho-layout">
             <div class="card-icon">
-              <img
-                src="img/sizelayout.png"
-                alt="icon tamanho layout"
-                class="logo"
-              />
+              <img src="img/sizelayout.png" alt="icon tamanho layout" />
             </div>
             <span>Tamanho e Layout</span>
           </div>
 
-          <div class="card" data-category="elementos-visuais">
-            <div class="card-icon">ICON</div>
+          <div
+            class="card"
+            id="elementos-visuais"
+            data-category="elementos-visuais"
+          >
+            <div class="card-icon">
+              <img src="img/visual.png" alt="icon Elementos Visuais" />
+            </div>
             <span>Elementos Visuais</span>
           </div>
 
-          <div class="card" data-category="navegacao-interacao">
-            <div class="card-icon">ICON</div>
+          <div
+            class="card"
+            id="navegacao-interacao"
+            data-category="navegacao-interacao"
+          >
+            <div class="card-icon">
+              <img src="img/navigation.png" alt="icon Navegação e Interação" />
+            </div>
             <span>Navegação e Interação</span>
           </div>
 
-          <div class="card" data-category="feedback-erros">
-            <div class="card-icon">ICON</div>
+          <div class="card" id="feedback-erros" data-category="feedback-erros">
+            <div class="card-icon">
+              <img src="img/feedback.png" alt="icon Feedback e Erros" />
+            </div>
             <span>Feedback e Erros</span>
           </div>
 
-          <div class="card" data-category="seguranca-confianca">
-            <div class="card-icon">ICON</div>
+          <div
+            class="card"
+            id="seguranca-confianca"
+            data-category="seguranca-confianca"
+          >
+            <div class="card-icon">
+              <img src="img/security.png" alt="icon Segurança e Confiança" />
+            </div>
             <span>Segurança e Confiança</span>
           </div>
 
-          <div class="card" data-category="aprendizagem-suporte">
-            <div class="card-icon">ICON</div>
+          <div
+            class="card"
+            id="aprendizagem-suporte"
+            data-category="aprendizagem-suporte"
+          >
+            <div class="card-icon">
+              <img src="img/learning.png" alt="icon Aprendizagem e Suporte" />
+            </div>
             <span>Aprendizagem e Suporte</span>
           </div>
 
-          <div class="card" data-category="funcionalidades-conteudo">
-            <div class="card-icon">ICON</div>
+          <div
+            class="card"
+            id="funcionalidades-conteudo"
+            data-category="funcionalidades-conteudo"
+          >
+            <div class="card-icon">    <img src="img/features.png" alt="icon Funcionalidades e Conteúdo" /></div>
             <span>Funcionalidades e Conteúdo</span>
           </div>
 
-          <div class="card" data-category="recomendacoes-gerais">
-            <div class="card-icon">ICON</div>
+          <div
+            class="card"
+            id="recomendacoes-gerais"
+            data-category="recomendacoes-gerais"
+          >
+            <div class="card-icon"><img src="img/recomendations.png" alt="icon Recomendações Gerais" /></div>
             <span>Recomendações Gerais</span>
           </div>
         </section>
@@ -132,7 +215,6 @@
                 >laragabriellysouzabatista@gmail.com</a
               >
             </div>
-
             <div class="profile-card">
               <img
                 src="img/Diana.jpg"

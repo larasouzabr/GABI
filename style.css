@@ -423,6 +423,12 @@ input:checked + .slider:before {
     gap: 1rem;
   }
 
+  #guideline-title {
+    font-size: 1rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+  }
+
   .card-icon > img {
     width: 80px;
   }

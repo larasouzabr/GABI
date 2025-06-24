@@ -425,9 +425,12 @@ input:checked + .slider:before {
 
   .card-icon > img {
     width: 80px;
-    min-height: 97px;
   }
 
+  .card-icon {
+    align-content: center;
+    min-height: 120px;
+  }
   .card > span {
     font-size: small;
     font-weight: 700;

@@ -11,6 +11,7 @@
   --border-color: #4a5568;
   --shadow-color: rgba(0, 0, 0, 0.2);
   --hover-bg-color: #5a6578;
+  --last-icon-color: #ffffff;
 }
 
 [data-theme="light"] {
@@ -23,6 +24,7 @@
   --border-color: #dee2e6;
   --shadow-color: rgba(0, 0, 0, 0.1);
   --hover-bg-color: #f1f3f5;
+  --last-icon-color: #1a202c;
 }
 
 html {
@@ -205,7 +207,40 @@ body {
 .card:nth-child(5):hover,
 .card:nth-child(6):hover,
 .card:nth-child(7):hover,
-.card:nth-child(8):hover {
+.card:nth-child(8):hover,
+.card:hover .ph {
+  color: #ffffff;
+}
+.card:nth-child(1) .ph {
+  color: #3498db;
+}
+.card:nth-child(2) .ph {
+  color: #e74c3c;
+}
+.card:nth-child(3) .ph {
+  color: #2ecc71;
+}
+.card:nth-child(4) .ph {
+  color: #f1c40f;
+}
+.card:nth-child(5) .ph {
+  color: #9b59b6;
+}
+.card:nth-child(6) .ph {
+  color: #e67e22;
+}
+.card:nth-child(7) .ph {
+  color: #1abc9c;
+}
+.card:nth-child(8) .ph {
+  color: var(--last-icon-color);
+}
+
+.ph {
+  font-size: 5rem;
+}
+
+.card:hover .ph {
   color: #ffffff;
 }
 

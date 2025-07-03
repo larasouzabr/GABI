@@ -74,6 +74,19 @@ body {
   width: 120px;
 }
 
+.logo-dark-theme {
+  display: block;
+}
+.logo-light-theme {
+  display: none;
+}
+
+[data-theme="light"] .logo-dark-theme {
+  display: none;
+}
+[data-theme="light"] .logo-light-theme {
+  display: block;
+}
 .main-nav ul {
   list-style: none;
 }

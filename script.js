@@ -246,13 +246,13 @@ document.addEventListener("DOMContentLoaded", () => {
           type: "do-dont",
           do: {
             image:
-              "https://placehold.co/400x300/2ecc71/ffffff?text=✅+Conexão+Segura", // SUBSTITUA PELA SUA IMAGEM
+              "https://placehold.co/400x300/2ecc71/ffffff?text=Conexão+Segura", 
             caption:
               "Inclua mensagens e ícones que reforcem a segurança, como 'Conexão Segura' ou um cadeado visível.",
           },
           dont: {
             image:
-              "https://placehold.co/400x300/e74c3c/ffffff?text=Sem+Indicador+de+Segurança", // SUBSTITUA PELA SUA IMAGEM
+              "https://placehold.co/400x300/e74c3c/ffffff?text=Sem+Indicador+de+Segurança", 
             caption:
               "A ausência de indicadores de segurança pode gerar desconfiança e medo de prosseguir com a operação.",
           },

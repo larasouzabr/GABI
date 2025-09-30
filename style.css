@@ -37,6 +37,45 @@ html {
   padding: 0;
 }
 
+.language-switcher-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.lang-button {
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.lang-button:hover {
+  transform: scale(1.1);
+}
+
+.lang-button.active {
+  border-color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.lang-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -87,11 +126,9 @@ body {
 [data-theme="light"] .logo-light-theme {
   display: block;
 }
-.main-nav ul {
-  list-style: none;
-}
 
-.main-nav li a {
+/* ESTILOS CORRIGIDOS PARA OS LINKS DAS CATEGORIAS */
+.main-nav a {
   color: var(--text-muted);
   text-decoration: none;
   display: block;
@@ -99,14 +136,16 @@ body {
   border-radius: 8px;
   font-weight: 500;
   transition: background-color 0.2s, color 0.2s;
+  margin-bottom: 0.5rem; /* Adiciona espaçamento vertical */
 }
 
-.main-nav li a:hover {
+.main-nav a:hover {
   color: var(--text-color);
   background-color: var(--hover-bg-color);
 }
 
-.main-nav li.active a {
+.main-nav a.active {
+  /* Estilo para link ativo, se necessário no futuro */
   background-color: var(--accent-color);
   color: var(--bg-color);
   font-weight: bold;
@@ -286,7 +325,7 @@ body {
   background-color: #1abc9c;
 }
 .card:nth-child(8):hover {
-  background-color: #1a202c;
+  background-color: #3d4c5f; /* <<< COR ALTERADA AQUI */
 }
 
 .card:hover span {
@@ -985,15 +1024,8 @@ input:checked + .slider:before {
   .menu-toggle {
     display: block;
   }
-  .main-nav li a {
-    color: var(--text-muted);
-    text-decoration: none;
-    display: block;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 500;
-    font-size: 11px;
-    transition: background-color 0.2s, color 0.2s;
+  .main-nav a {
+    font-size: 1rem; /* Aumenta a fonte para melhor toque */
   }
   .theme-switcher-container {
     margin-top: 5px;

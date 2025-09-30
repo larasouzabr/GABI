@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
+    <script src="https://unpkg.com/i18next/i18next.js"></script>
+
     <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
@@ -69,11 +71,32 @@
         </header>
 
         <nav class="main-nav">
+          <div class="language-switcher-container">
+            <button
+              id="lang-pt"
+              class="lang-button active"
+              aria-label="Mudar para Português"
+            >
+              <img
+                src="img/BRFLAG.jpg"
+                alt="Bandeira do Brasil"
+              />
+            </button>
+            <button
+              id="lang-en"
+              class="lang-button"
+              aria-label="Mudar para Inglês"
+            >
+              <img
+                src="img/reinounidoflag.jpg"
+                alt="Bandeira do Reino Unido"
+              />
+            </button>
+          </div>
           <div class="theme-switcher-container">
             <span class="material-symbols-outlined theme-icon-moon"
               >dark_mode</span
             >
-
             <label class="theme-switcher" for="theme-toggle">
               <input
                 type="checkbox"
@@ -82,24 +105,11 @@
               />
               <span class="slider"></span>
             </label>
-
             <span class="material-symbols-outlined theme-icon-sun"
               >light_mode</span
             >
           </div>
           <h3 class="nav-title">CATEGORIAS</h3>
-          <ul>
-            <li><a href="#tamanho-layout">Tamanho e Layout</a></li>
-            <li><a href="#elementos-visuais">Elementos Visuais</a></li>
-            <li><a href="#navegacao-interacao">Navegação e Interação</a></li>
-            <li><a href="#feedback-erros">Feedback e Erros</a></li>
-            <li><a href="#seguranca-confianca">Segurança e Confiança</a></li>
-            <li><a href="#aprendizagem-suporte">Aprendizagem e Suporte</a></li>
-            <li>
-              <a href="#funcionalidades-conteudo">Funcionalidades e Conteúdo</a>
-            </li>
-            <li><a href="#recomendacoes-gerais">Recomendações Gerais</a></li>
-          </ul>
         </nav>
       </aside>
 
@@ -229,31 +239,11 @@
           <h3>Desenvolvido por</h3>
           <div class="profiles-container">
             <div class="profile-card">
-              <img
-                src="img/Lara.jpg"
-                style="width: 130px; height: 130px"
-                alt="Foto de Lara Gabrielly Lima"
-                class="profile-picture"
-              />
-              <p class="profile-name">Lara Gabrielly Lima</p>
-              <p>Aluna Engenharia de Software - UFC Quixadá</p>
-              <a
-                href="mailto:laragabriellysouzabatista@gmail.com"
-                class="profile-email"
-                >laragabriellysouzabatista@gmail.com</a
-              >
+              <p class="profile-name">Anonymous</p>
             </div>
             <div class="profile-card">
               <img
-                src="img/Diana.jpg"
-                alt="Foto de Diana Braga"
-                class="profile-picture"
-              />
-              <p class="profile-name">Diana Braga</p>
-              <p>Professora orientadora - UFC Quixadá</p>
-              <a href="mailto:diana@ufc.br" class="profile-email"
-                >diana@ufc.br</a
-              >
+            <p class="profile-name">Anonymous</p>
             </div>
           </div>
         </footer>

@@ -1,0 +1,453 @@
+{
+    "translation": {
+        "do_text": "Do",
+        "dont_text": "Don't",
+        "nav_title": "CATEGORIES",
+        "intro_h1": "GABI: Welcoming Banking Guide for the Elderly",
+        "intro_p": "GABI (Welcoming Banking Guide for the Elderly) is a Final Course Project (TCC) developed based on a systematic literature review (SLR) and direct research with elderly users. This practical guide gathers guidelines based on scientific evidence and the real experience of the 60+ population, aiming to support the development of digital Internet Banking interfaces that are accessible, intuitive, and welcoming for this audience. GABI offers clear recommendations for developers, designers, and financial institutions to create inclusive digital platforms, facilitating access for the elderly to online banking services with security, autonomy, and confidence.",
+        "guidelines_h2": "Guideline Categories",
+        "back_button": "&larr; Back",
+        "footer_h3": "Developed by",
+        "categories": {
+            "tamanho-layout": "Size and Layout",
+            "elementos-visuais": "Visual Elements",
+            "navegacao-interacao": "Navigation & Interaction",
+            "feedback-erros": "Feedback & Errors",
+            "seguranca-confianca": "Security & Trust",
+            "aprendizagem-suporte": "Learning & Support",
+            "funcionalidades-conteudo": "Features & Content",
+            "recomendacoes-gerais": "General Recommendations"
+        },
+        "demos": {
+            "contrast": {
+                "font_size": "Font Size",
+                "bg_color": "Background Color",
+                "text_color": "Text Color",
+                "calculating": "Contrast Ratio: Calculating...",
+                "ratio_prefix": "Contrast Ratio:",
+                "level_prefix": "WCAG Level:",
+                "status_fail": "Fail",
+                "recommendation_fail": "Very low contrast.",
+                "status_aa_large": "AA (Large Text)",
+                "recommendation_aa_large": "Acceptable for large text.",
+                "status_aa": "AA",
+                "recommendation_aa": "Good contrast for normal text.",
+                "status_aaa": "AAA",
+                "recommendation_aaa": "Excellent contrast, ideal for everyone."
+            },
+            "general": {
+                "option1": "Option 1",
+                "option2": "Option 2",
+                "option3": "Option 3"
+            },
+            "large_mode": {
+                "toggle_on": "Enable Large Mode",
+                "toggle_off": "Disable Large Mode"
+            },
+            "feedback": {
+                "title": "Feedback Type:",
+                "notification": "Notification",
+                "vibration": "Vibration (Simul.)",
+                "action_button": "Confirm Action",
+                "success_message": "Action confirmed successfully!"
+            },
+            "password": {
+                "label": "Password Field",
+                "show": "Show password",
+                "hide": "Hide password",
+                "placeholder": "Enter your password",
+                "example_value": "sample-password"
+            },
+            "walkthrough": {
+                "balance": "My Balance: $1,234.56",
+                "pay_bills": "Pay Bills",
+                "view_statement": "View Statement",
+                "previous": "Previous",
+                "next": "Next",
+                "finish": "Finish"
+            },
+            "autocomplete": {
+                "label": "Payee Name",
+                "placeholder": "Type the payee's name...",
+                "sample1": "Mary Smith",
+                "sample2": "John Doe",
+                "sample3": "Downtown Market",
+                "sample4": "Good Health Pharmacy",
+                "sample5": "Martha Jones"
+            }
+        },
+        "guidelines": {
+            "tamanho-layout": {
+                "title": "1. Interface Size and Layout",
+                "details": [
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-device-tablet",
+                        "text": "**Larger screens significantly improve interaction efficiency** and reduce operational errors. For example, 6.0-inch interfaces have shown a reduction in task completion time and a lower error rate compared to smaller screens."
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-grid-four",
+                        "text": "Combined layouts can improve interaction efficiency. For 4.5-inch interfaces, the nine-cell layout is more useful, while for larger interfaces, the combined layout is preferable."
+                    },
+                    {
+                        "type": "do-dont",
+                        "do": {
+                            "image": "img/do-interface.png",
+                            "caption": "Use fewer elements to focus the user's attention."
+                        },
+                        "dont": {
+                            "image": "img/dont-interface.png",
+                            "caption": "Avoid an excess of competing information."
+                        }
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-target",
+                        "text": "Prioritize the **central part of the screen for main actions**, as elderly users tend to focus more on this area and may have difficulty identifying top and bottom menus."
+                    },
+                    {
+                        "type": "interactive-demo",
+                        "title": "Create a \"Large Mode\"",
+                        "description": "Adjust the interface for users with visual impairments. This mode would apply design recommendations and increase the size of screen elements, being more effective than just increasing the font size through the OS.",
+                        "demo_text": "This paragraph serves as an example. By activating \"Large Mode,\" you will notice that reading becomes more comfortable, with larger and more spaced-out fonts, making it easier to see for those who need it most."
+                    }
+                ]
+            },
+            "elementos-visuais": {
+                "title": "2. Visual Elements",
+                "details": [
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-paint-brush",
+                        "text": "<strong>Icon Optimization:</strong> Icons should be optimized and designed to convey information clearly, understandably, and intuitively, with minimal semantic distance between the icon and its meaning. **Standardization, color, and shape** are key factors for icon comprehension."
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-strategy",
+                        "text": "<strong>Best Practices for Icons:</strong> Icons should have a semantically close meaning, be **familiar, labeled, and concrete**, representing real-world objects. Avoid abstract and very small icons, which are difficult for the elderly to understand. Consider allowing users to choose icons from a set of options and always test them to ensure proper mapping."
+                    },
+                    {
+                        "type": "do-dont",
+                        "do": {
+                            "image": "https://placehold.co/400x300/2ecc71/ffffff?text=Concrete+Icon\\nwith+Label",
+                            "caption": "Use concrete, familiar icons, and whenever possible, accompany them with a clear text label."
+                        },
+                        "dont": {
+                            "image": "https://placehold.co/400x300/e74c3c/ffffff?text=Abstract+Icon\\nNo+Label",
+                            "caption": "Avoid abstract or highly stylized icons, which may not be universally understood by the 60+ audience."
+                        }
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-text-aa",
+                        "text": "<strong>Text Legibility:</strong> Small fonts and colors with insufficient contrast are significant barriers. It is recommended to use **larger fonts for headings** and colors with **high contrast**. Preferably, use the operating system's default fonts, and if using a custom font, ensure a minimum size of 12pt."
+                    },
+                    {
+                        "type": "interactive-contrast-demo",
+                        "title": "Interactive Legibility Test",
+                        "description": "Use the controls below to see how font size and color contrast affect reading ease in practice.",
+                        "demo_text": "Technology can be a great ally in old age, promoting independence and connection. Ensuring that digital interfaces are accessible is a fundamental step towards inclusion."
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-palette",
+                        "text": "<strong>Use of Colors:</strong> Avoid complementary color combinations (like red/green) and ensure sufficient contrast. Distinguish credits and debits with culturally associated colors (e.g., **green for credits and red for debits**)."
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-eye",
+                        "text": "<strong>Content Organization and Presentation:</strong> Present important information in a **highlighted** manner (e.g., total transaction amounts). Visually separate different types of financial activities, such as income and expenses."
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-video",
+                        "text": "<strong>Graphics and Animations:</strong> Although they can be useful, graphics for summarizing data should be rigorously tested with users. Offer the option to **disable the view of charts** or summaries. Avoid purely cosmetic elements or flashing animations."
+                    }
+                ]
+            },
+            "navegacao-interacao": {
+                "title": "3. Navigation and Interaction",
+                "details": [
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-compass",
+                        "text": "<strong>Clear and Intuitive Navigation:</strong> Navigation elements should be **self-explanatory, consistent, and easily identifiable**. The application's functionality should be limited to a core set of essential features to avoid overload."
+                    },
+                    {
+                        "type": "do-dont",
+                        "do": {
+                            "image": "https://placehold.co/400x300/2ecc71/ffffff?text=Simple+Navigation\\n(Max+5+items)",
+                            "caption": "Menus with a few essential options are easier to navigate and remember."
+                        },
+                        "dont": {
+                            "image": "https://placehold.co/400x300/e74c3c/ffffff?text=Complex+Navigation\\n(Many+items)",
+                            "caption": "Avoid an excess of menus and submenus, which can confuse and overwhelm the user."
+                        }
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-git-commit",
+                        "text": "<strong>Distinguishing Elements:</strong> It is essential to **clearly distinguish clickable from non-clickable elements** through color, shape, and shading, so the user knows exactly where they can interact."
+                    },
+                    {
+                        "type": "interactive-tap-size-demo",
+                        "title": "Tap Area Test",
+                        "description": "Motor precision can decrease with age. Large, well-spaced buttons prevent accidental taps and frustration. Try clicking the buttons below to feel the difference."
+                    },
+                    {
+                        "type": "do-dont",
+                        "do": {
+                            "image": "https://placehold.co/400x300/2ecc71/ffffff?text=Swipe+Gesture",
+                            "caption": "For sequential tasks (like a step-by-step guide), the swipe gesture is intuitive and helps to understand progress."
+                        },
+                        "dont": {
+                            "image": "https://placehold.co/400x300/e74c3c/ffffff?text='Next'+Button",
+                            "caption": "Small 'Next' buttons can be hard to hit and break the flow of the task."
+                        }
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-info",
+                        "text": "<strong>Input Field Hints:</strong> Include **tooltips** or clear help texts next to form fields to inform the user about the type of data requested and the expected format (e.g., YYYY-MM-DD)."
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-magnifying-glass-plus",
+                        "text": "<strong>Zoom Function:</strong> Always offer a **native zoom function in the application**, which can be controlled by pinch gestures, allowing users to adjust the content to their visual needs."
+                    }
+                ]
+            },
+            "feedback-erros": {
+                "title": "4. Feedback and Error Handling",
+                "details": [
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-chat-circle-dots",
+                        "text": "Good feedback informs the user what is happening and guides them on what to do. For the 60+ audience, this clear communication is essential to build trust and reduce anxiety while using the application."
+                    },
+                    {
+                        "type": "interactive-feedback-demo",
+                        "title": "Feedback Types Demonstration",
+                        "description": "After an action, the system needs to respond. See below for different ways to provide feedback to the user. Choose a feedback type and click the button to see the result."
+                    },
+                    {
+                        "type": "do-dont",
+                        "do": {
+                            "image": "https://placehold.co/400x300/2ecc71/ffffff?text=Clear+Progress+Bar",
+                            "caption": "Always indicate that an action is in progress with a progress indicator, such as a bar or a spinner."
+                        },
+                        "dont": {
+                            "image": "https://placehold.co/400x300/e74c3c/ffffff?text=Frozen+Screen\\nNo+Feedback",
+                            "caption": "Never leave the screen static after an action. The lack of feedback makes the user think the app has crashed."
+                        }
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-arrows-clockwise",
+                        "text": "<strong>Error Recovery:</strong> The system should always allow an action to be **easily reversed** via an 'Undo' button. This gives the user the confidence to explore without fear of making permanent mistakes."
+                    },
+                    {
+                        "type": "do-dont",
+                        "do": {
+                            "image": "https://placehold.co/400x300/2ecc71/ffffff?text=Clear+Message\\nand+Solution",
+                            "caption": "Error message: 'Oops! The password must have 8 digits. Please try again.'"
+                        },
+                        "dont": {
+                            "image": "https://placehold.co/400x300/e74c3c/ffffff?text=Technical+Message\\nNo+Help",
+                            "caption": "Error message: 'Error #AU401: Authentication failed.'"
+                        }
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-warning-circle",
+                        "text": "<strong>Recovery Support:</strong> Remember that mechanisms to close error windows or trigger an 'undo' also need **large, easy-to-tap buttons**, respecting the size and spacing guidelines."
+                    }
+                ]
+            },
+            "seguranca-confianca": {
+                "title": "5. Security, Trust, and Risk",
+                "details": [
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-shield-check",
+                        "text": "<strong>Building Trust and Reducing Risk:</strong> Trust is a crucial factor for the adoption of mobile payments by the elderly. It is essential to improve the **quality of service, security, reliability, and privacy protection** of the systems."
+                    },
+                    {
+                        "type": "do-dont",
+                        "do": {
+                            "image": "https://placehold.co/400x300/2ecc71/ffffff?text=Secure+Connection",
+                            "caption": "Include messages and icons that reinforce security, such as 'Secure Connection' or a visible padlock."
+                        },
+                        "dont": {
+                            "image": "https://placehold.co/400x300/e74c3c/ffffff?text=No+Security+Indicator",
+                            "caption": "The absence of security indicators can generate distrust and fear of proceeding with the operation."
+                        }
+                    },
+                    {
+                        "type": "interactive-password-demo",
+                        "title": "Password Privacy and Visibility",
+                        "description": "Typing passwords can be difficult, and errors are common. Offering a button to show/hide the typed password reduces frustration and increases user confidence. Click the eye icon to test it."
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-users-three",
+                        "text": "<strong>Formalize Third-Party Support:</strong> Acknowledge the role of \"proxies\" (family, friends) by creating a \"Helper Mode.\" This mode would grant limited access to the account (e.g., for viewing only), restricting critical actions like transfers or deletions, keeping financial control with the elderly owner."
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-lifebuoy",
+                        "text": "<strong>Risk Management:</strong> Developers should adopt careful risk control measures, mitigating dangers associated with systems, finances, and personal information, and be transparent about these measures."
+                    }
+                ]
+            },
+            "aprendizagem-suporte": {
+                "title": "6. Learning and Support",
+                "details": [
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-student",
+                        "text": "<strong>Training and Guidance:</strong> Training is fundamental for confidence. **Practical and contextual ('situational') training** within the application itself is much more effective than manuals or verbal explanations."
+                    },
+                    {
+                        "type": "interactive-walkthrough-demo",
+                        "title": "Step-by-Step Guide Demonstration",
+                        "description": "Scaffolded learning and structured walkthroughs guide the user through their first interaction with a task, like paying a bill. Use the \"Previous\" and \"Next\" buttons to navigate the simulated tutorial below.",
+                        "steps": [
+                            {
+                                "target": "#wt-saldo",
+                                "text": "Step 1: This is your available balance. It's always good to check it before any operation."
+                            },
+                            {
+                                "target": "#wt-pagar",
+                                "text": "Step 2: To pay a bill, click the 'Pay Bills' button. Let's start here."
+                            },
+                            {
+                                "target": "#wt-extrato",
+                                "text": "Step 3: If you need to see your past transactions, the 'View Statement' button will take you to the history."
+                            },
+                            {
+                                "target": "#wt-ajuda",
+                                "text": "Step 4: If you have any questions, the 'Help' button is always visible in the corner of the screen."
+                            },
+                            {
+                                "target": "self",
+                                "text": "Tutorial complete! Guides like this help the user learn by doing, in a safe and contextual way."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-microphone",
+                        "text": "<strong>Audio and Multimodality:</strong> Use audio narration for the actions performed and to read important information. Feedback with auditory cues is very beneficial, especially for those with visual impairments."
+                    },
+                    {
+                        "type": "do-dont",
+                        "do": {
+                            "image": "https://placehold.co/400x300/2ecc71/ffffff?text=Easy-to-Access\\nVirtual+Assistant",
+                            "caption": "Offer a virtual assistant (VUI) or an always-visible help button for quick questions."
+                        },
+                        "dont": {
+                            "image": "https://placehold.co/400x300/e74c3c/ffffff?text=Help+Hidden\\nin+Menus",
+                            "caption": "Don't hide the help section in complex menus. Support needs to be found effortlessly."
+                        }
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-users-four",
+                        "text": "<strong>Personalization and Human Support:</strong> Adapt the interface complexity to the user's level (beginner/advanced). Above all, remember that **in-person or phone support** is still the most valuable for building trust."
+                    }
+                ]
+            },
+            "funcionalidades-conteudo": {
+                "title": "7. Features and Content",
+                "details": [
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-user-focus",
+                        "text": "<strong>Personalization:</strong> Allow users to control the information displayed. The system should **learn users' frequent requests** and allow quick access to this information, such as creating shortcuts for the most used operations."
+                    },
+                    {
+                        "type": "do-dont",
+                        "do": {
+                            "image": "https://placehold.co/400x300/2ecc71/ffffff?text=Dashboard+with\\nPersonal+Shortcuts",
+                            "caption": "A home screen with personalized shortcuts saves time and clicks."
+                        },
+                        "dont": {
+                            "image": "https://placehold.co/400x300/e74c3c/ffffff?text=Generic+Dashboard\\nfor+Everyone",
+                            "caption": "A generic screen forces the user to repeatedly search for the same functions."
+                        }
+                    },
+                    {
+                        "type": "interactive-autocomplete-demo",
+                        "title": "Automation with Autocomplete",
+                        "description": "Typing is a common source of errors and effort. Use the autocomplete function to suggest contacts or already saved information, minimizing the need to type. Start typing a name in the field below (e.g., 'Mary')."
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-stack-simple",
+                        "text": "<strong>Data Consistency:</strong> The design must ensure consistency between different statements and sections of the application, presenting a **'cohesive image'** that connects the components. The same data should always have the same appearance."
+                    },
+                    {
+                        "type": "do-dont",
+                        "do": {
+                            "image": "https://placehold.co/400x300/2ecc71/ffffff?text=Skeuomorphic+Receipt\\n(Familiar)",
+                            "caption": "A digital receipt that mimics a paper receipt is instantly familiar and easy to understand."
+                        },
+                        "dont": {
+                            "image": "https://placehold.co/400x300/e74c3c/ffffff?text=Receipt+with\\nUnformatted+Data",
+                            "caption": "Raw data presented without familiar formatting can cause confusion and distrust."
+                        }
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-bell",
+                        "text": "<strong>Alerts and Notifications:</strong> Notify users about pending payments **effectively (clear and visible), but not annoyingly (no beeps or screen-blocking pop-ups)**. A subtle banner at the top of the screen is a great approach."
+                    }
+                ]
+            },
+            "recomendacoes-gerais": {
+                "title": "8. General Design Recommendations",
+                "details": [
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-hand-heart",
+                        "text": "<strong>Prioritize the Needs of the Elderly:</strong> It is essential to incorporate the specific needs of the 60+ audience from the initial stages of development. The design must be based on the pillars of being **clear, easy to understand, legible, and secure**."
+                    },
+                    {
+                        "type": "do-dont",
+                        "do": {
+                            "image": "https://placehold.co/400x300/2ecc71/ffffff?text=Easy-to-Use+App\\nfor+Everyone",
+                            "caption": "Position the product as 'easy to use for everyone.' Good inclusive design benefits every user, regardless of age."
+                        },
+                        "dont": {
+                            "image": "https://placehold.co/400x300/e74c3c/ffffff?text=App+for+the+Elderly",
+                            "caption": "Avoid the label 'specifically for the elderly,' as this can create stigmas and alienate this audience."
+                        }
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-users-four",
+                        "text": "<strong>User-Centered Design:</strong> Adopting user-centered design concepts for the elderly is crucial. **Work with elderly users** to design and test the content and features, ensuring that the solution meets their real needs."
+                    },
+                    {
+                        "type": "do-dont",
+                        "do": {
+                            "image": "https://placehold.co/400x300/2ecc71/ffffff?text=Optimized+Flow\\n(4+Steps)",
+                            "caption": "Optimize interaction flows so that common tasks are completed in the fewest possible steps."
+                        },
+                        "dont": {
+                            "image": "https://placehold.co/400x300/e74c3c/ffffff?text=Long+Flow\\n(7+Steps)",
+                            "caption": "Long processes with many steps increase the chance of error and user frustration."
+                        }
+                    },
+                    {
+                        "type": "default",
+                        "icon": "ph-bold ph-seal-check",
+                        "text": "<strong>Quality of Information and Service:</strong> Systems should provide high-quality information and services, with a focus on complete product data and a reliable and consistent response capacity."
+                    }
+                ]
+            }
+        }
+    }
+}

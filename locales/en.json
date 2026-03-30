@@ -1,5 +1,7 @@
 {
     "translation": {
+        "skip_link": "Skip to main content",
+        "nav_link_label": "Go to category",
         "do_text": "Do",
         "dont_text": "Don't",
         "nav_title": "CATEGORIES",
@@ -8,6 +10,11 @@
         "guidelines_h2": "Guideline Categories",
         "back_button": "&larr; Back",
         "footer_h3": "Developed by",
+        "institution_usp": "University of São Paulo",
+        "institution_ufc": "Federal University of Ceará",
+        "award_badge": "Distinguished Paper Award",
+        "award_conference": "ICSE 2026 · Software Engineering in Society",
+        "award_title": "Connecting Generations Through Code: GABI, A Community-Driven Framework for Engineering Inclusive Financial Software for the Elderly",
         "categories": {
             "tamanho-layout": "Size and Layout",
             "elementos-visuais": "Visual Elements",

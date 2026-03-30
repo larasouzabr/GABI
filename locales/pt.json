@@ -1,5 +1,7 @@
 {
     "translation": {
+        "skip_link": "Pular para o conteúdo principal",
+        "nav_link_label": "Ir para categoria",
         "do_text": "Faça",
         "dont_text": "Não faça",
         "nav_title": "CATEGORIAS",
@@ -8,6 +10,11 @@
         "guidelines_h2": "Categorias de Diretrizes",
         "back_button": "&larr; Voltar",
         "footer_h3": "Desenvolvido por",
+        "institution_usp": "Universidade de São Paulo",
+        "institution_ufc": "Universidade Federal do Ceará",
+        "award_badge": "Distinguished Paper Award",
+        "award_conference": "ICSE 2026 · Engenharia de Software na Sociedade",
+        "award_title": "Connecting Generations Through Code: GABI, A Community-Driven Framework for Engineering Inclusive Financial Software for the Elderly",
         "categories": {
             "tamanho-layout": "Tamanho e Layout",
             "elementos-visuais": "Elementos Visuais",

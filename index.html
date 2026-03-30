@@ -47,7 +47,8 @@
     </noscript>
   </head>
   <body>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar">
       &#9776;
     </button>
 
@@ -61,7 +62,8 @@
           />
           <img
             src="img/light-theme-logo.svg"
-            alt="Logo GABI"
+            alt=""
+            aria-hidden="true"
             class="logo logo-light-theme"
           />
 
@@ -113,9 +115,9 @@
         </nav>
       </aside>
 
-      <main class="main-content">
-        <section id="project-intro">
-          <h1>GABI: Guia Acolhedor de Banking para Idosos</h1>
+      <main class="main-content" id="main-content">
+        <section id="project-intro" role="region" aria-labelledby="project-intro-heading">
+          <h1 id="project-intro-heading">GABI: Guia Acolhedor de Banking para Idosos</h1>
 
           <p class="project-description">
             O GABI (Guia de Acolhedor de Banking para Idosos) é um projeto de
@@ -130,14 +132,15 @@
             plataformas digitais inclusivas, facilitando o acesso dos idosos aos
             serviços bancários online com segurança, autonomia e confiança.
           </p>
+
         </section>
 
         <h2>Categorias de Diretrizes</h2>
 
-        <section id="category-grid" class="category-grid">
-          <div class="card" id="tamanho-layout" data-category="tamanho-layout">
+        <section id="category-grid" class="category-grid" role="region" aria-label="Categorias de Diretrizes">
+          <div class="card" id="tamanho-layout" data-category="tamanho-layout" role="button" tabindex="0">
             <div class="card-icon">
-              <i class="ph ph-ruler" alt="icon tamanho layout"></i>
+              <i class="ph ph-ruler" aria-hidden="true"></i>
             </div>
             <span>Tamanho e Layout</span>
           </div>
@@ -146,9 +149,11 @@
             class="card"
             id="elementos-visuais"
             data-category="elementos-visuais"
+            role="button"
+            tabindex="0"
           >
             <div class="card-icon">
-              <i class="ph ph-palette" alt="icon Elementos Visuais"></i>
+              <i class="ph ph-palette" aria-hidden="true"></i>
             </div>
             <span>Elementos Visuais</span>
           </div>
@@ -157,16 +162,18 @@
             class="card"
             id="navegacao-interacao"
             data-category="navegacao-interacao"
+            role="button"
+            tabindex="0"
           >
             <div class="card-icon">
-              <i class="ph ph-hand-tap" alt="icon Navegação e Interação"></i>
+              <i class="ph ph-hand-tap" aria-hidden="true"></i>
             </div>
             <span>Navegação e Interação</span>
           </div>
 
-          <div class="card" id="feedback-erros" data-category="feedback-erros">
+          <div class="card" id="feedback-erros" data-category="feedback-erros" role="button" tabindex="0">
             <div class="card-icon">
-              <i class="ph ph-warning-circle" alt="icon Feedback e Erros"></i>
+              <i class="ph ph-warning-circle" aria-hidden="true"></i>
             </div>
             <span>Feedback e Erros</span>
           </div>
@@ -175,12 +182,11 @@
             class="card"
             id="seguranca-confianca"
             data-category="seguranca-confianca"
+            role="button"
+            tabindex="0"
           >
             <div class="card-icon">
-              <i
-                class="ph ph-shield-check"
-                alt="icon Segurança e Confiança"
-              ></i>
+              <i class="ph ph-shield-check" aria-hidden="true"></i>
             </div>
             <span>Segurança e Confiança</span>
           </div>
@@ -189,9 +195,11 @@
             class="card"
             id="aprendizagem-suporte"
             data-category="aprendizagem-suporte"
+            role="button"
+            tabindex="0"
           >
             <div class="card-icon">
-              <i class="ph ph-question" alt="icon Aprendizagem e Suporte"></i>
+              <i class="ph ph-question" aria-hidden="true"></i>
             </div>
             <span>Aprendizagem e Suporte</span>
           </div>
@@ -200,12 +208,11 @@
             class="card"
             id="funcionalidades-conteudo"
             data-category="funcionalidades-conteudo"
+            role="button"
+            tabindex="0"
           >
             <div class="card-icon">
-              <i
-                class="ph ph-gear-six"
-                alt="icon Funcionalidades e Conteúdo"
-              ></i>
+              <i class="ph ph-gear-six" aria-hidden="true"></i>
             </div>
             <span>Funcionalidades e Conteúdo</span>
           </div>
@@ -214,12 +221,11 @@
             class="card"
             id="recomendacoes-gerais"
             data-category="recomendacoes-gerais"
+            role="button"
+            tabindex="0"
           >
             <div class="card-icon">
-              <i
-                class="ph ph-clipboard-text"
-                alt="icon Recomendações Gerais"
-              ></i>
+              <i class="ph ph-clipboard-text" aria-hidden="true"></i>
             </div>
             <span>Recomendações Gerais</span>
           </div>
@@ -228,7 +234,8 @@
         <section
           id="guidelines-content"
           class="guidelines-content"
-          style="display: none"
+          role="region"
+          aria-labelledby="guideline-title"
         >
           <button id="back-button">&larr; Voltar</button>
           <h2 id="guideline-title"></h2>
@@ -236,14 +243,63 @@
         </section>
 
         <footer class="site-footer">
+            <a
+            href="https://conf.researchr.org/details/icse-2026/icse-2026-software-engineering-in-society/19/Connecting-Generations-Through-Code-GABI-A-Community-Driven-Framework-for-Engineeri"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="award-footer-link"
+          >
+            <i class="ph ph-trophy" aria-hidden="true"></i>
+            <span class="award-badge">Distinguished Paper Award</span>
+            <span class="award-conference">ICSE 2026 · Software Engineering in Society</span>
+          </a>
           <h3>Desenvolvido por</h3>
+        
+
           <div class="profiles-container">
             <div class="profile-card">
-              <p class="profile-name">Anonymous</p>
+              <div class="profile-picture-wrapper">
+                <img src="img/authors/lara.jpeg" alt="Foto de Lara Lima" class="profile-picture" onerror="this.style.display='none'">
+                <div class="profile-overlay">
+                  <a href="mailto:laralima@usp.br" aria-label="E-mail de Lara Lima"><i class="ph ph-envelope"></i></a>
+                  <a href="http://lattes.cnpq.br/8966559885773392" target="_blank" rel="noopener noreferrer" aria-label="Currículo Lattes de Lara Lima"><i class="ph ph-graduation-cap"></i></a>
+                </div>
+              </div>
+              <p class="profile-name">Lara Lima</p>
+              <p class="profile-institution" data-institution="usp">Universidade de São Paulo</p>
             </div>
             <div class="profile-card">
-              <img
-            <p class="profile-name">Anonymous</p>
+              <div class="profile-picture-wrapper">
+                <img src="img/authors/victor.jpg" alt="Foto de Victor Alves" class="profile-picture" onerror="this.style.display='none'">
+                <div class="profile-overlay">
+                  <a href="mailto:anthonyvictor90@gmail.com" aria-label="E-mail de Victor Alves"><i class="ph ph-envelope"></i></a>
+                  <a href="http://lattes.cnpq.br/3300150355360408" target="_blank" rel="noopener noreferrer" aria-label="Currículo Lattes de Victor Alves"><i class="ph ph-graduation-cap"></i></a>
+                </div>
+              </div>
+              <p class="profile-name">Victor Alves</p>
+              <p class="profile-institution" data-institution="usp">Universidade de São Paulo</p>
+            </div>
+            <div class="profile-card">
+              <div class="profile-picture-wrapper">
+                <img src="img/authors/carla.jpg" alt="Foto de Carla Ilane" class="profile-picture" onerror="this.style.display='none'">
+                <div class="profile-overlay">
+                  <a href="mailto:carlailane@ufc.br" aria-label="E-mail de Carla Ilane"><i class="ph ph-envelope"></i></a>
+                  <a href="http://lattes.cnpq.br/4277471687235814" target="_blank" rel="noopener noreferrer" aria-label="Currículo Lattes de Carla Ilane"><i class="ph ph-graduation-cap"></i></a>
+                </div>
+              </div>
+              <p class="profile-name">Carla Ilane</p>
+              <p class="profile-institution" data-institution="ufc">Universidade Federal do Ceará</p>
+            </div>
+            <div class="profile-card">
+              <div class="profile-picture-wrapper">
+                <img src="img/authors/diana.png" alt="Foto de Diana Braga" class="profile-picture" onerror="this.style.display='none'">
+                <div class="profile-overlay">
+                  <a href="mailto:diana@ufc.br" aria-label="E-mail de Diana Braga"><i class="ph ph-envelope"></i></a>
+                  <a href="http://lattes.cnpq.br/1798085135725122" target="_blank" rel="noopener noreferrer" aria-label="Currículo Lattes de Diana Braga"><i class="ph ph-graduation-cap"></i></a>
+                </div>
+              </div>
+              <p class="profile-name">Diana Braga</p>
+              <p class="profile-institution" data-institution="ufc">Universidade Federal do Ceará</p>
             </div>
           </div>
         </footer>

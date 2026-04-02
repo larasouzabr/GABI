@@ -16,7 +16,7 @@
   --sidebar-bg: #ffffff;
   --card-bg: #ffffff;
   --text-color: #212529;
-  --text-muted: #6c757d;
+  --text-muted: #555f6d;
   --accent-color: #005a9c;
   --border-color: #dee2e6;
   --shadow-color: rgba(0, 0, 0, 0.1);
@@ -267,12 +267,13 @@ body {
   padding: 1.5rem;
   text-align: center;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s, background-color 0.2s;
+  transition: transform 0.2s ease-in-out;
   border: 1px solid var(--border-color);
   box-shadow: 0 4px 10px var(--shadow-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  will-change: transform;
 }
 
 .card:hover {
